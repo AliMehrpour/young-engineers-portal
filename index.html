@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STEM & Lego Robotics Classes | Young Engineers Southwest San Jose</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Discover premium STEM & Lego Robotics after-school programs, weekend classes, and summer camps for kids in Southwest San Jose. Learn engineering concepts by playing!">
+  <meta name="keywords" content="Lego robotics San Jose, STEM classes kids, after school programs San Jose, robotics camp, Young Engineers, lego challenge">
+  
+  <!-- OG Meta Tags -->
+  <meta property="og:title" content="STEM & Lego Robotics Classes | Young Engineers Southwest San Jose">
+  <meta property="og:description" content="Premium STEM & Lego Robotics programs for kids. Dynamic lessons covering engineering and physics through play.">
+  <meta property="og:type" content="website">
+  
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Premium Header & Navigation -->
+  <header class="glass-panel">
+    <div class="navbar-container">
+      <div class="logo" id="nav-logo">
+        <img src="assets/logo.png" alt="Young Engineers Southwest San Jose" style="height: 42px; display: block;">
+      </div>
+      
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#/home" class="nav-item active" data-path="home">Home</a></li>
+        <li><a href="#/classes" class="nav-item" data-path="classes">Classes</a></li>
+        <li><a href="#/about" class="nav-item" data-path="about">About Us</a></li>
+        <li><a href="#/faq" class="nav-item" data-path="faq">FAQ & Contact</a></li>
+        <li><a href="#/admin" class="nav-item" data-path="admin">Admin Panel</a></li>
+        <li><a href="#/enroll" class="nav-item nav-btn" data-path="enroll">Enroll Now</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Dynamic Page Viewport -->
+  <main id="app-viewport">
+    <!-- Dynamic page templates will be rendered here by app.js -->
+  </main>
+
+  <!-- Canvas Overlay for Confetti on successful enrollment -->
+  <canvas id="confetti-canvas" class="confetti-canvas"></canvas>
+
+  <!-- Premium Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-top">
+        <div class="footer-info">
+          <div class="logo">
+            <img src="assets/logo.png" alt="Young Engineers logo" style="height: 42px; display: block;">
+          </div>
+          <p>Teaching STEM & Lego Robotics principles through structured play. Serving schools and community centers in Southwest San Jose and surrounding areas.</p>
+          <div class="recognition-badge-footer" style="margin-top: 1.5rem;">
+            <img src="assets/recognition.png" alt="Officially recognized by EU Commission & Harvard Education" style="height: 44px; display: block; opacity: 0.85; filter: grayscale(10%) contrast(90%); transition: opacity 0.3s, filter 0.3s;" onmouseover="this.style.opacity=1;this.style.filter='none';" onmouseout="this.style.opacity=0.85;this.style.filter='grayscale(10%) contrast(90%)';">
+          </div>
+        </div>
+        
+        <div class="footer-links-grid">
+          <div class="footer-links-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#/home">Home</a></li>
+              <li><a href="#/about">About Us</a></li>
+              <li><a href="#/classes">Robotics Classes</a></li>
+              <li><a href="#/faq">FAQs</a></li>
+              <li><a href="#/faq">Contact Us</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links-col">
+            <h4>Programs</h4>
+            <ul id="footer-programs-list">
+              <li><a href="#/classes?filter=4-6">Big Builders (Ages 4-6)</a></li>
+              <li><a href="#/classes?filter=7-10">Lego Challenge (Ages 7-10)</a></li>
+              <li><a href="#/classes?filter=10-14">Galileo Technic & Robotics (Ages 10-14)</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links-col">
+            <h4>Admin</h4>
+            <ul>
+              <li><a href="#/admin">Instructor Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Young Engineers Southwest San Jose. All rights reserved. Built with love for STEM education.</p>
+        <div class="social-links">
+          <a href="https://facebook.com" target="_blank" class="social-link fb" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://instagram.com" target="_blank" class="social-link ig" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://youtube.com" target="_blank" class="social-link yt" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core Javascript Application Logic -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>

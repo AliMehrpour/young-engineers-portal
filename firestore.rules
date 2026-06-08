@@ -1,0 +1,47 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Classes collection
+    match /classes/{classId} {
+      allow read, write: if true;
+    }
+
+    // Enrollments collection
+    match /enrollments/{enrollmentId} {
+      allow read, write: if true;
+    }
+
+    // Inquiries collection
+    match /inquiries/{inquiryId} {
+      allow read, write: if true;
+    }
+
+    // Mail queue for Firebase Trigger Email extension
+    match /mail/{mailId} {
+      allow create: if true;
+      allow read, update, delete: if false; // Security: only write-only for clients sending emails
+    }
+
+    // Programs collection
+    match /programs/{programId} {
+      allow read, write: if true;
+    }
+
+    // Education Providers collection
+    match /education_providers/{providerId} {
+      allow read: if true;
+      allow write: if 
+        request.resource.data.keys().hasAll(['id', 'name', 'provider_type', 'website', 'address', 'phone', 'contact_name', 'contact_email', 'contact_phone', 'description', 'created_at']) &&
+        request.resource.data.name is string &&
+        request.resource.data.provider_type in ['school', 'charter_school', 'preschool', 'daycare', 'tutoring_center', 'after_school_program', 'summer_camp', 'music_school', 'sports_academy', 'community_program', 'online_school', 'other'] &&
+        request.resource.data.website is string &&
+        request.resource.data.address is string &&
+        request.resource.data.phone is string &&
+        request.resource.data.contact_name is string &&
+        request.resource.data.contact_email is string &&
+        request.resource.data.contact_phone is string &&
+        request.resource.data.description is string &&
+        request.resource.data.created_at is string;
+    }
+  }
+}

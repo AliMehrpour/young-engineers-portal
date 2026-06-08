@@ -1,0 +1,17 @@
+{
+  "name": "young-engineers-portal",
+  "version": "1.0.0",
+  "description": "Lego Robotics Class Registration and Enrollment Portal for Young Engineers Southwest San Jose",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "firebase": "^12.13.0",
+    "jsdom": "^29.1.1"
+  }
+}
